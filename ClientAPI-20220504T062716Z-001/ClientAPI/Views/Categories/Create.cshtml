@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ClientAPI.Models.Category>
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Name">Name:</label>
+        <input class="form-control" name="Name" />
+    </div>
+    <div class="form-group">
+        <label for="Summary">Desc:</label>
+        <input class="form-control" name="Desc" />
+    </div>
+
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Add</button>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

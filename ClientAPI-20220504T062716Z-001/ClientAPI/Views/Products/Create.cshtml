@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ClientAPI.Models.Product>
+
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Name">Name:</label>
+        <input class="form-control" name="Name" />
+    </div>
+    <div class="form-group">
+        <label for="Summary">Desc:</label>
+        <input class="form-control" name="Desc" />
+    </div>
+    <div class="form-group">
+        <label for="Summary">Price:</label>
+        <input class="form-control" name="Price" />
+    </div>
+    <div class="form-group">
+        <label for="Summary">Quantity:</label>
+        <input class="form-control" name="Quantity" />
+    </div>
+    <div class="form-group">
+        <label for="Summary">DiscountPersen:</label>
+        <input class="form-control" name="DiscountPersen" />
+    </div>
+    
+    <div class="form-group">
+        <label for="Summary">category:</label>
+        <input class="form-control" name="Category" />
+    </div>
+
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Add</button>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

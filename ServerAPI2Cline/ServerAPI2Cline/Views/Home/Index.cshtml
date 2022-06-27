@@ -1,0 +1,54 @@
+﻿@model ServerAPI2Cline.Models.User
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="wrapper">
+    <a href="user/register">Register</a>
+       <a href="user/login">Login</a>
+    <div class="title-text">
+        <div class="card login">
+            Login From
+        </div>
+         <div class="card Signup">
+            Signup From
+        </div>
+    </div>
+    <div class="from-cotainer">
+        <div class="slide-controls">
+            <input type="radio" name="slide" id="login" checked />
+             <input type="radio" name="slide" id="signup" />
+             <label for="login" class="slide login">Login</label>
+              <label for="login" class="slide sigin">Signup</label>
+        </div>
+        <div class="form-inner">
+            <form asp-action="login" class="login">
+                <div class="field">
+                    <input asp-for="UserName" class="form-control" />
+                </div>
+                <div class="field">
+                    <input asp-for="Password" class="form-control" />
+                </div>
+                  <div class="fiend-btn">
+                      <div class="btn-layer"></div>
+                      <input type="submit" value="Signup" />
+                  </div>
+            </form>
+            <form asp-action="register" class="signup">
+                <div class="field">
+                    <input asp-for="UserName" class="form-control" />
+                </div>
+                <div class="field">
+                    <input asp-for="Password" class="form-control" />
+                </div>
+                 <div class="field">
+                    <input asp-for="CfPassword" class="form-control" />
+                </div>
+                <div class="field btn">
+                    <div class="btn-layer"></div>
+                    <input type="submit" value="Signup" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
